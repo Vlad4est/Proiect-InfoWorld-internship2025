@@ -1,0 +1,296 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "firstName": "Administrator",
+      "lastName": "Principal",
+      "email": "admin@serviceauto.ro",
+      "role": "admin",
+      "active": true,
+      "createdAt": "2025-05-01T08:00:00.000Z",
+      "updatedAt": "2025-05-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "username": "tehnician",
+      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "firstName": "Mihai",
+      "lastName": "Tehnician",
+      "email": "mihai.tehnician@serviceauto.ro",
+      "role": "tehnician",
+      "active": true,
+      "createdAt": "2025-05-01T09:00:00.000Z",
+      "updatedAt": "2025-05-01T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "username": "new.admin",
+      "password": "$2b$10$Hy4x3EXxSBkFEIzDlIiqQ.iMj2MAEuGolEkN4AKdNi6ERaogEYVS2",
+      "firstName": "Nou",
+      "lastName": "Administrator",
+      "email": "new.admin@serviceauto.ro",
+      "role": "admin",
+      "active": true,
+      "createdAt": "2025-05-07T08:23:56.195Z",
+      "updatedAt": "2025-05-07T08:23:56.195Z"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "username": "ion.popescu",
+      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "firstName": "Ion",
+      "lastName": "Popescu",
+      "phoneNumbers": [
+        "0722123456",
+        "0312345678"
+      ],
+      "email": "ion.popescu@email.com",
+      "active": true,
+      "createdAt": "2025-05-01T10:00:00.000Z",
+      "updatedAt": "2025-05-01T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "username": "maria.ionescu",
+      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "firstName": "Maria",
+      "lastName": "Ionescu",
+      "phoneNumbers": [
+        "0733987654"
+      ],
+      "email": "maria.ionescu@email.com",
+      "active": true,
+      "createdAt": "2025-05-01T11:30:00.000Z",
+      "updatedAt": "2025-05-01T11:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "username": "andrei.dumitrescu",
+      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "firstName": "Andrei",
+      "lastName": "Dumitrescu",
+      "phoneNumbers": [
+        "0744555666"
+      ],
+      "email": "andrei.dumitrescu@email.com",
+      "active": false,
+      "createdAt": "2025-05-02T09:15:00.000Z",
+      "updatedAt": "2025-05-04T14:20:00.000Z"
+    },
+    {
+      "id": 4,
+      "username": "client.test",
+      "password": "$2b$10$yo/t653vlPOOkXsFhrkXAOsn9iG3s7Drs50BhEIrrD/DI8aB61GnW",
+      "firstName": "Client",
+      "lastName": "Test",
+      "phoneNumbers": [
+        "0722333444"
+      ],
+      "email": "client.test@email.com",
+      "active": true,
+      "createdAt": "2025-05-07T08:03:26.354Z",
+      "updatedAt": "2025-05-07T08:03:26.354Z"
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "licensePlate": "B 123 ABC",
+      "chassisNumber": "WVWZZZ1JZXW123456",
+      "brand": "Volkswagen",
+      "model": "Golf",
+      "year": 2020,
+      "engineType": "diesel",
+      "engineCapacity": 1968,
+      "horsePower": 150,
+      "powerKW": 110,
+      "active": true,
+      "createdAt": "2025-05-01T10:05:00.000Z",
+      "updatedAt": "2025-05-01T10:05:00.000Z"
+    },
+    {
+      "id": 2,
+      "clientId": 1,
+      "licensePlate": "B 456 DEF",
+      "chassisNumber": "WVWZZZ1JZXW789012",
+      "brand": "Audi",
+      "model": "A4",
+      "year": 2022,
+      "engineType": "hybrid",
+      "engineCapacity": 2000,
+      "horsePower": 204,
+      "powerKW": 150,
+      "active": true,
+      "createdAt": "2025-05-01T10:10:00.000Z",
+      "updatedAt": "2025-05-01T10:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "clientId": 2,
+      "licensePlate": "CJ 01 MAR",
+      "chassisNumber": "WBAXXX1234567890",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "engineType": "diesel",
+      "engineCapacity": 3000,
+      "horsePower": 286,
+      "powerKW": 210,
+      "active": true,
+      "createdAt": "2025-05-01T11:35:00.000Z",
+      "updatedAt": "2025-05-01T11:35:00.000Z"
+    },
+    {
+      "id": 4,
+      "clientId": 3,
+      "licensePlate": "B 999 ZZZ",
+      "chassisNumber": "TMBZZZ1234567890",
+      "brand": "Skoda",
+      "model": "Octavia",
+      "year": 2019,
+      "engineType": "benzina",
+      "engineCapacity": 1500,
+      "horsePower": 150,
+      "powerKW": 110,
+      "active": false,
+      "createdAt": "2025-05-02T09:20:00.000Z",
+      "updatedAt": "2025-05-04T14:25:00.000Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "carId": 1,
+      "date": "2025-05-10",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "duration": 90,
+      "description": "Revizie anuală",
+      "contactMethod": "telefon",
+      "status": "programat",
+      "createdAt": "2025-05-03T12:00:00.000Z",
+      "updatedAt": "2025-05-03T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "clientId": 2,
+      "carId": 3,
+      "date": "2025-05-11",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "duration": 180,
+      "description": "Schimb plăcuțe frână, verificare suspensie",
+      "contactMethod": "email",
+      "status": "programat",
+      "createdAt": "2025-05-04T09:30:00.000Z",
+      "updatedAt": "2025-05-04T09:30:00.000Z"
+    }
+  ],
+  "serviceRecords": [
+    {
+      "id": 1,
+      "appointmentId": 1,
+      "reception": {
+        "visualIssues": "Zgârietură portieră dreapta, far spart",
+        "clientReportedIssues": "Zgomot suspensie, probleme la frânare",
+        "receivedAt": "2025-05-10T10:00:00.000Z",
+        "receivedBy": "Mihai Tehnician"
+      },
+      "processing": {
+        "operations": [
+          "Schimb ulei și filtre",
+          "Verificare și reglare frâne",
+          "Diagnosticare suspensie"
+        ],
+        "replacedParts": [
+          {
+            "name": "Ulei motor",
+            "quantity": 5,
+            "unitPrice": 60
+          },
+          {
+            "name": "Filtru ulei",
+            "quantity": 1,
+            "unitPrice": 45
+          },
+          {
+            "name": "Filtru aer",
+            "quantity": 1,
+            "unitPrice": 75
+          }
+        ],
+        "additionalIssues": "Amortizor față dreapta uzat, necesită înlocuire",
+        "repaired": "parțial",
+        "processingDuration": 80,
+        "processedAt": "2025-05-10T11:20:00.000Z",
+        "processedBy": "Alex Mecanic"
+      },
+      "completed": true,
+      "createdAt": "2025-05-10T10:00:00.000Z",
+      "updatedAt": "2025-05-10T11:30:00.000Z"
+    }
+  ],
+  "parts": [
+    {
+      "id": 1,
+      "name": "Ulei motor 5W30",
+      "category": "Uleiuri",
+      "stock": 30,
+      "unitPrice": 60,
+      "unitType": "litru",
+      "active": true,
+      "createdAt": "2025-04-15T08:00:00.000Z",
+      "updatedAt": "2025-04-15T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Filtru ulei universal",
+      "category": "Filtre",
+      "stock": 25,
+      "unitPrice": 45,
+      "unitType": "bucată",
+      "active": true,
+      "createdAt": "2025-04-15T08:10:00.000Z",
+      "updatedAt": "2025-04-15T08:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Filtru aer Golf 7",
+      "category": "Filtre",
+      "stock": 15,
+      "unitPrice": 75,
+      "unitType": "bucată",
+      "active": true,
+      "createdAt": "2025-04-15T08:20:00.000Z",
+      "updatedAt": "2025-04-15T08:20:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Plăcuțe frână față BMW X5",
+      "category": "Frâne",
+      "stock": 8,
+      "unitPrice": 450,
+      "unitType": "set",
+      "active": true,
+      "createdAt": "2025-04-15T09:00:00.000Z",
+      "updatedAt": "2025-04-15T09:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Amortizor față Golf",
+      "category": "Suspensie",
+      "stock": 4,
+      "unitPrice": 350,
+      "unitType": "bucată",
+      "active": true,
+      "createdAt": "2025-04-15T09:30:00.000Z",
+      "updatedAt": "2025-04-15T09:30:00.000Z"
+    }
+  ]
+}

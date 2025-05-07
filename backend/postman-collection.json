@@ -1,0 +1,910 @@
+{
+    "info": {
+      "_postman_id": "27e3f1d5-8c2e-4b20-9abc-d9d6f62c5b6a",
+      "name": "Auto Service API",
+      "description": "Colecție de cereri pentru testarea API-ului de gestionare a unui service auto",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Auth",
+        "item": [
+          {
+            "name": "Register client",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/register",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "register"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"username\": \"client.test\",\n  \"password\": \"password123\",\n  \"firstName\": \"Client\",\n  \"lastName\": \"Test\",\n  \"phoneNumbers\": [\"0722333444\"],\n  \"email\": \"client.test@email.com\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Înregistrează un client nou."
+            }
+          },
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/login",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "login"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password123\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Autentifică un utilizator (client sau admin)."
+            }
+          },
+          {
+            "name": "Get profile",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/profile",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "profile"]
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "description": "Obține profilul utilizatorului autentificat."
+            }
+          },
+          {
+            "name": "Update password",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/password",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "password"]
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"currentPassword\": \"password123\",\n  \"newPassword\": \"newPassword123\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează parola utilizatorului autentificat."
+            }
+          },
+          {
+            "name": "Create admin",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/admin",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "admin"]
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"username\": \"new.admin\",\n  \"password\": \"password123\",\n  \"firstName\": \"Nou\",\n  \"lastName\": \"Administrator\",\n  \"email\": \"new.admin@serviceauto.ro\",\n  \"role\": \"admin\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Creează un admin nou (doar admin poate crea alți admini)."
+            }
+          },
+          {
+            "name": "Get admins",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/admins",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "admins"]
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "description": "Obține lista de administratori (doar pentru admin)."
+            }
+          },
+          {
+            "name": "Toggle admin active",
+            "request": {
+              "method": "PATCH",
+              "url": {
+                "raw": "http://localhost:3000/api/auth/admins/2/active",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "auth", "admins", "2", "active"]
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"active\": false\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Activează sau dezactivează un admin (doar pentru admin)."
+            }
+          }
+        ]
+      },
+      {
+        "name": "Clients",
+        "item": [
+          {
+            "name": "Get all clients",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/clients",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients"]
+              },
+              "description": "Obține lista completă de clienți."
+            }
+          },
+          {
+            "name": "Get client by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/clients/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients", "1"]
+              },
+              "description": "Obține detaliile unui client după ID."
+            }
+          },
+          {
+            "name": "Get client cars",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/clients/1/cars",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients", "1", "cars"]
+              },
+              "description": "Obține mașinile unui client după ID-ul clientului."
+            }
+          },
+          {
+            "name": "Create client",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/clients",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"firstName\": \"Alexandru\",\n  \"lastName\": \"Popescu\",\n  \"phoneNumbers\": [\"0722123456\"],\n  \"email\": \"alexandru.popescu@email.com\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Creează un client nou."
+            }
+          },
+          {
+            "name": "Update client",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:3000/api/clients/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients", "1"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"phoneNumbers\": [\"0722123456\", \"0312345678\"],\n  \"email\": \"ion.popescu.updated@email.com\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează datele unui client."
+            }
+          },
+          {
+            "name": "Toggle client active",
+            "request": {
+              "method": "PATCH",
+              "url": {
+                "raw": "http://localhost:3000/api/clients/1/active",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients", "1", "active"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"active\": false\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Activează sau dezactivează un client."
+            }
+          },
+          {
+            "name": "Delete client",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:3000/api/clients/3",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "clients", "3"]
+              },
+              "description": "Șterge un client."
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cars",
+        "item": [
+          {
+            "name": "Get all cars",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/cars",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "cars"]
+              },
+              "description": "Obține lista completă de mașini."
+            }
+          },
+          {
+            "name": "Get car by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/cars/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "cars", "1"]
+              },
+              "description": "Obține detaliile unei mașini după ID."
+            }
+          },
+          {
+            "name": "Create car",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/cars",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "cars"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"clientId\": 1,\n  \"licensePlate\": \"B 789 XYZ\",\n  \"chassisNumber\": \"WVWZZZ1JZXY987654\",\n  \"brand\": \"Toyota\",\n  \"model\": \"Corolla\",\n  \"year\": 2023,\n  \"engineType\": \"hibrid\",\n  \"engineCapacity\": 1800,\n  \"horsePower\": 122\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Creează o mașină nouă."
+            }
+          },
+          {
+            "name": "Update car",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:3000/api/cars/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "cars", "1"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"year\": 2021,\n  \"horsePower\": 160\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează datele unei mașini."
+            }
+          },
+          {
+            "name": "Toggle car active",
+            "request": {
+              "method": "PATCH",
+              "url": {
+                "raw": "http://localhost:3000/api/cars/1/active",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "cars", "1", "active"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"active\": false\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Activează sau dezactivează o mașină."
+            }
+          },
+          {
+            "name": "Delete car",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:3000/api/cars/4",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "cars", "4"]
+              },
+              "description": "Șterge o mașină."
+            }
+          }
+        ]
+      },
+      {
+        "name": "Appointments",
+        "item": [
+          {
+            "name": "Get all appointments",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/appointments",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "appointments"]
+              },
+              "description": "Obține lista completă de programări."
+            }
+          },
+          {
+            "name": "Get appointment by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/appointments/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "appointments", "1"]
+              },
+              "description": "Obține detaliile unei programări după ID."
+            }
+          },
+          {
+            "name": "Create appointment",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/appointments",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "appointments"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"clientId\": 2,\n  \"carId\": 3,\n  \"date\": \"2025-06-15\",\n  \"startTime\": \"14:00\",\n  \"endTime\": \"15:30\",\n  \"description\": \"Schimb ulei și verificare frâne\",\n  \"contactMethod\": \"telefon\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Creează o programare nouă."
+            }
+          },
+          {
+            "name": "Update appointment",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:3000/api/appointments/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "appointments", "1"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"date\": \"2025-05-12\",\n  \"startTime\": \"11:00\",\n  \"endTime\": \"12:30\",\n  \"description\": \"Revizie anuală și verificare climatizare\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează datele unei programări."
+            }
+          },
+          {
+            "name": "Delete appointment",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:3000/api/appointments/2",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "appointments", "2"]
+              },
+              "description": "Șterge o programare."
+            }
+          }
+        ]
+      },
+      {
+        "name": "Service Records",
+        "item": [
+          {
+            "name": "Get all service records",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/service-records",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "service-records"]
+              },
+              "description": "Obține lista completă de înregistrări service."
+            }
+          },
+          {
+            "name": "Get service record by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/service-records/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "service-records", "1"]
+              },
+              "description": "Obține detaliile unei înregistrări service după ID."
+            }
+          },
+          {
+            "name": "Create service record",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/service-records",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "service-records"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"appointmentId\": 2,\n  \"reception\": {\n    \"visualIssues\": \"Zgârietură bara față, far spart\",\n    \"clientReportedIssues\": \"Zgomot la frânare, vibrații volan\",\n    \"receivedBy\": \"Dan Tehnician\"\n  }\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Creează o înregistrare service nouă."
+            }
+          },
+          {
+            "name": "Add processing",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/service-records/1/processing",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "service-records", "1", "processing"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"operations\": [\n    \"Schimb plăcuțe frână față\",\n    \"Echilibrare roți\",\n    \"Verificare și reglare suspensie\"\n  ],\n  \"replacedParts\": [\n    {\n      \"name\": \"Plăcuțe frână față BMW X5\",\n      \"quantity\": 1,\n      \"unitPrice\": 450\n    },\n    {\n      \"name\": \"Filtru ulei universal\",\n      \"quantity\": 1,\n      \"unitPrice\": 45\n    }\n  ],\n  \"additionalIssues\": \"Discuri de frână uzate, recomandat înlocuire la următoarea vizită\",\n  \"repaired\": \"complet\",\n  \"processingDuration\": 120,\n  \"processedBy\": \"Mihai Mecanic\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Adaugă informații de procesare la o înregistrare service."
+            }
+          },
+          {
+            "name": "Update service record",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:3000/api/service-records/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "service-records", "1"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"reception\": {\n    \"visualIssues\": \"Zgârietură portieră dreapta, far spart, zgârietură capotă\"\n  },\n  \"completed\": true\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează datele unei înregistrări service."
+            }
+          },
+          {
+            "name": "Delete service record",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:3000/api/service-records/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "service-records", "1"]
+              },
+              "description": "Șterge o înregistrare service."
+            }
+          }
+        ]
+      },
+      {
+        "name": "Parts",
+        "item": [
+          {
+            "name": "Get all parts",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/parts",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts"]
+              },
+              "description": "Obține lista completă de piese."
+            }
+          },
+          {
+            "name": "Get categories",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/parts/categories",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts", "categories"]
+              },
+              "description": "Obține lista de categorii de piese."
+            }
+          },
+          {
+            "name": "Get part by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:3000/api/parts/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts", "1"]
+              },
+              "description": "Obține detaliile unei piese după ID."
+            }
+          },
+          {
+            "name": "Create part",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:3000/api/parts",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Disc frână față BMW X5\",\n  \"category\": \"Frâne\",\n  \"stock\": 6,\n  \"unitPrice\": 320,\n  \"unitType\": \"bucată\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Creează o piesă nouă."
+            }
+          },
+          {
+            "name": "Update part",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:3000/api/parts/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts", "1"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Ulei motor 5W30 Synthetic\",\n  \"unitPrice\": 65\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează datele unei piese."
+            }
+          },
+          {
+            "name": "Toggle part active",
+            "request": {
+              "method": "PATCH",
+              "url": {
+                "raw": "http://localhost:3000/api/parts/1/active",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts", "1", "active"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"active\": false\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Activează sau dezactivează o piesă."
+            }
+          },
+          {
+            "name": "Update stock",
+            "request": {
+              "method": "PATCH",
+              "url": {
+                "raw": "http://localhost:3000/api/parts/1/stock",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts", "1", "stock"]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"stock\": 10,\n  \"operation\": \"add\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "description": "Actualizează stocul unei piese."
+            }
+          },
+          {
+            "name": "Delete part",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:3000/api/parts/5",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "parts", "5"]
+              },
+              "description": "Șterge o piesă."
+            }
+          }
+        ]
+      }
+    ]
+  }

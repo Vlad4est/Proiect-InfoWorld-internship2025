@@ -39,7 +39,7 @@ router.put('/password', authMiddleware.authenticate, authController.updatePasswo
  */
 router.post('/admin', 
   authMiddleware.authenticate, 
-  //authMiddleware.authorize('admin'), 
+  authMiddleware.authorize('admin'), 
   authController.createAdmin
 );
 

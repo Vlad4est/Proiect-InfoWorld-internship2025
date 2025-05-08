@@ -3,45 +3,45 @@
     {
       "id": 1,
       "username": "admin",
-      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "password": "$2b$10$kAxDJg6Effm2fWGCj0l/uO976qDlaJat0kkVLlTRRn9bvwB0V2mR6",
       "firstName": "Administrator",
       "lastName": "Principal",
       "email": "admin@serviceauto.ro",
       "role": "admin",
       "active": true,
-      "createdAt": "2025-05-01T08:00:00.000Z",
-      "updatedAt": "2025-05-01T08:00:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.920Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 2,
       "username": "tehnician",
-      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "password": "$2b$10$kAxDJg6Effm2fWGCj0l/uO976qDlaJat0kkVLlTRRn9bvwB0V2mR6",
       "firstName": "Mihai",
       "lastName": "Tehnician",
       "email": "mihai.tehnician@serviceauto.ro",
       "role": "tehnician",
       "active": true,
-      "createdAt": "2025-05-01T09:00:00.000Z",
-      "updatedAt": "2025-05-01T09:00:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 3,
       "username": "new.admin",
-      "password": "$2b$10$Hy4x3EXxSBkFEIzDlIiqQ.iMj2MAEuGolEkN4AKdNi6ERaogEYVS2",
+      "password": "$2b$10$5QawNwz5kpri6A2Wxg6EA.TC86VszPPVCnec1bOP/mRiT.PGtNun2",
       "firstName": "Nou",
       "lastName": "Administrator",
       "email": "new.admin@serviceauto.ro",
       "role": "admin",
       "active": true,
-      "createdAt": "2025-05-07T08:23:56.195Z",
-      "updatedAt": "2025-05-07T08:23:56.195Z"
+      "createdAt": "2025-05-08T09:35:17.824Z",
+      "updatedAt": "2025-05-08T09:35:17.824Z"
     }
   ],
   "clients": [
     {
       "id": 1,
       "username": "ion.popescu",
-      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "password": "$2b$10$kAxDJg6Effm2fWGCj0l/uO976qDlaJat0kkVLlTRRn9bvwB0V2mR6",
       "firstName": "Ion",
       "lastName": "Popescu",
       "phoneNumbers": [
@@ -50,13 +50,13 @@
       ],
       "email": "ion.popescu@email.com",
       "active": true,
-      "createdAt": "2025-05-01T10:00:00.000Z",
-      "updatedAt": "2025-05-01T10:00:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 2,
       "username": "maria.ionescu",
-      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "password": "$2b$10$kAxDJg6Effm2fWGCj0l/uO976qDlaJat0kkVLlTRRn9bvwB0V2mR6",
       "firstName": "Maria",
       "lastName": "Ionescu",
       "phoneNumbers": [
@@ -64,13 +64,13 @@
       ],
       "email": "maria.ionescu@email.com",
       "active": true,
-      "createdAt": "2025-05-01T11:30:00.000Z",
-      "updatedAt": "2025-05-01T11:30:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 3,
       "username": "andrei.dumitrescu",
-      "password": "$2b$10$eEv9nXtZ4cUDDi92.MiI4.AfwpjW/6mDL3XdGG7QWdFD3ZzQxuwna",
+      "password": "$2b$10$kAxDJg6Effm2fWGCj0l/uO976qDlaJat0kkVLlTRRn9bvwB0V2mR6",
       "firstName": "Andrei",
       "lastName": "Dumitrescu",
       "phoneNumbers": [
@@ -78,22 +78,8 @@
       ],
       "email": "andrei.dumitrescu@email.com",
       "active": false,
-      "createdAt": "2025-05-02T09:15:00.000Z",
-      "updatedAt": "2025-05-04T14:20:00.000Z"
-    },
-    {
-      "id": 4,
-      "username": "client.test",
-      "password": "$2b$10$yo/t653vlPOOkXsFhrkXAOsn9iG3s7Drs50BhEIrrD/DI8aB61GnW",
-      "firstName": "Client",
-      "lastName": "Test",
-      "phoneNumbers": [
-        "0722333444"
-      ],
-      "email": "client.test@email.com",
-      "active": true,
-      "createdAt": "2025-05-07T08:03:26.354Z",
-      "updatedAt": "2025-05-07T08:03:26.354Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     }
   ],
   "cars": [
@@ -110,8 +96,8 @@
       "horsePower": 150,
       "powerKW": 110,
       "active": true,
-      "createdAt": "2025-05-01T10:05:00.000Z",
-      "updatedAt": "2025-05-01T10:05:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 2,
@@ -126,8 +112,8 @@
       "horsePower": 204,
       "powerKW": 150,
       "active": true,
-      "createdAt": "2025-05-01T10:10:00.000Z",
-      "updatedAt": "2025-05-01T10:10:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 3,
@@ -142,8 +128,8 @@
       "horsePower": 286,
       "powerKW": 210,
       "active": true,
-      "createdAt": "2025-05-01T11:35:00.000Z",
-      "updatedAt": "2025-05-01T11:35:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 4,
@@ -158,8 +144,8 @@
       "horsePower": 150,
       "powerKW": 110,
       "active": false,
-      "createdAt": "2025-05-02T09:20:00.000Z",
-      "updatedAt": "2025-05-04T14:25:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     }
   ],
   "appointments": [
@@ -174,8 +160,8 @@
       "description": "Revizie anuală",
       "contactMethod": "telefon",
       "status": "programat",
-      "createdAt": "2025-05-03T12:00:00.000Z",
-      "updatedAt": "2025-05-03T12:00:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 2,
@@ -188,8 +174,8 @@
       "description": "Schimb plăcuțe frână, verificare suspensie",
       "contactMethod": "email",
       "status": "programat",
-      "createdAt": "2025-05-04T09:30:00.000Z",
-      "updatedAt": "2025-05-04T09:30:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     }
   ],
   "serviceRecords": [
@@ -199,7 +185,7 @@
       "reception": {
         "visualIssues": "Zgârietură portieră dreapta, far spart",
         "clientReportedIssues": "Zgomot suspensie, probleme la frânare",
-        "receivedAt": "2025-05-10T10:00:00.000Z",
+        "receivedAt": "2025-05-08T08:56:41.921Z",
         "receivedBy": "Mihai Tehnician"
       },
       "processing": {
@@ -228,12 +214,12 @@
         "additionalIssues": "Amortizor față dreapta uzat, necesită înlocuire",
         "repaired": "parțial",
         "processingDuration": 80,
-        "processedAt": "2025-05-10T11:20:00.000Z",
+        "processedAt": "2025-05-08T08:56:41.921Z",
         "processedBy": "Alex Mecanic"
       },
       "completed": true,
-      "createdAt": "2025-05-10T10:00:00.000Z",
-      "updatedAt": "2025-05-10T11:30:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     }
   ],
   "parts": [
@@ -245,8 +231,8 @@
       "unitPrice": 60,
       "unitType": "litru",
       "active": true,
-      "createdAt": "2025-04-15T08:00:00.000Z",
-      "updatedAt": "2025-04-15T08:00:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 2,
@@ -256,8 +242,8 @@
       "unitPrice": 45,
       "unitType": "bucată",
       "active": true,
-      "createdAt": "2025-04-15T08:10:00.000Z",
-      "updatedAt": "2025-04-15T08:10:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 3,
@@ -267,8 +253,8 @@
       "unitPrice": 75,
       "unitType": "bucată",
       "active": true,
-      "createdAt": "2025-04-15T08:20:00.000Z",
-      "updatedAt": "2025-04-15T08:20:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 4,
@@ -278,8 +264,8 @@
       "unitPrice": 450,
       "unitType": "set",
       "active": true,
-      "createdAt": "2025-04-15T09:00:00.000Z",
-      "updatedAt": "2025-04-15T09:00:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     },
     {
       "id": 5,
@@ -289,8 +275,8 @@
       "unitPrice": 350,
       "unitType": "bucată",
       "active": true,
-      "createdAt": "2025-04-15T09:30:00.000Z",
-      "updatedAt": "2025-04-15T09:30:00.000Z"
+      "createdAt": "2025-05-08T08:56:41.921Z",
+      "updatedAt": "2025-05-08T08:56:41.921Z"
     }
   ]
 }

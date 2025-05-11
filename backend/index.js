@@ -45,6 +45,10 @@ app.use('/api/service-records',
   authMiddleware.authorize('admin', 'tehnician'), 
   serviceRecordRoutes
 );
+
+// Routes protejate - necesită autentificare și rol de admin
+// sau tehnician
+// pentru a accesa piesele
 app.use('/api/parts', 
   authMiddleware.authenticate, 
   authMiddleware.authorize('admin', 'tehnician'), 

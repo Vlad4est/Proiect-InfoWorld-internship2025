@@ -37,6 +37,7 @@ Acest proiect reprezintă un API pentru gestionarea unui service auto. API-ul pe
    ```bash
    git clone git@github.com:Vlad4est/Proiect-InfoWorld-internship2025.git
    cd Proiect-InfoWorld-internship2025
+   cd backend
    ```
 
 2. Instalează dependențele:
@@ -50,7 +51,7 @@ Acest proiect reprezintă un API pentru gestionarea unui service auto. API-ul pe
 
 4. Populează baza de date cu date inițiale:
    ```bash
-   npm run populate-db
+   npm run populate
    ```
    Acest script va crea un fișier `db.json` cu date de test, inclusiv:
    - Admin: username=`admin`, password=`password123`

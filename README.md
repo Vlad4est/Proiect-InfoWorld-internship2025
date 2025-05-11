@@ -18,7 +18,7 @@ Acest proiect reprezintă un API pentru gestionarea unui service auto. API-ul pe
 
 ## Tehnologii utilizate
 
-- **Node.js** (v18.12.1)
+- **Node.js** (v22.3.0)
 - **Express.js** - Framework pentru API
 - **JWT** (JSON Web Tokens) - Pentru autentificare
 - **bcrypt** - Pentru hash-uirea parolelor
@@ -28,15 +28,15 @@ Acest proiect reprezintă un API pentru gestionarea unui service auto. API-ul pe
 
 ### Cerințe preliminare
 
-- Node.js (v18.12.1 sau mai recent)
+- Node.js (v22.3.0 sau mai recent)
 - npm (Node Package Manager)
 
 ### Pași de instalare
 
 1. Clonează repository-ul:
    ```bash
-   git clone <repository-url>
-   cd auto-service-api
+   git clone git@github.com:Vlad4est/Proiect-InfoWorld-internship2025.git
+   cd Proiect-InfoWorld-internship2025
    ```
 
 2. Instalează dependențele:

@@ -35,7 +35,7 @@ app.use((req, res, next) => {
 app.use('/api/auth', authRoutes);
 
 // Routes protejate - necesită autentificare
-app.use('/api/clients',  clientRoutes);
+app.use('/api/clients', authMiddleware.authenticate,  clientRoutes);
 app.use('/api/cars', authMiddleware.authenticate, carRoutes);
 app.use('/api/appointments', authMiddleware.authenticate, appointmentRoutes);
 

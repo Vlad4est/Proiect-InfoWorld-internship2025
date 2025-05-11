@@ -4,7 +4,7 @@ Acest proiect reprezintă implementarea unui API pentru gestionarea unui service
 
 ## Tehnologii utilizate
 
-- Node.js (v18.12.1)
+- Node.js (v22.3.0)
 - Express.js
 - JavaScript
 

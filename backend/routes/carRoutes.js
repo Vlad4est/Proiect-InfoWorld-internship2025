@@ -1,5 +1,7 @@
 const express = require('express');
 const carController = require('../controllers/carController');
+const authController = require('../controllers/authController');
+const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
@@ -36,13 +38,13 @@ router.put('/:id', carController.updateCar);
  * @desc Activează sau dezactivează o mașină
  * @access Public
  */
-router.patch('/:id/active', carController.toggleCarActive);
+router.patch('/:id/active', authMiddleware.authorize("admin", "tehnician"), carController.toggleCarActive);
 
 /**
  * @route DELETE /api/cars/:id
  * @desc Șterge o mașină
  * @access Public
  */
-router.delete('/:id', carController.deleteCar);
+router.delete('/:id', authMiddleware.authorize("admin", "tehnician"),carController.deleteCar);
 
 module.exports = router;

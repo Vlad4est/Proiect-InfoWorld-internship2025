@@ -129,6 +129,15 @@ class CarController {
         error.statusCode = 404;
         throw error;
       }
+
+      // Verifică dacă utilizatorul este posesorul mașinii sau are permisiuni de administrator/tehnician
+      if (req.user.role !== 'administrator' && req.user.role !== 'tehnician') {
+        if (clientId !== req.user.id) {
+          const error = new Error('Unauthorized to create a car for another client');
+          error.statusCode = 403;
+          throw error;
+        }
+      }
       
       // Verifică dacă numărul de înmatriculare este deja folosit
       const existingCar = await dbService.find('cars', { licensePlate });
@@ -185,6 +194,15 @@ class CarController {
         const error = new Error('Car not found');
         error.statusCode = 404;
         throw error;
+      }
+
+      // Verifică dacă utilizatorul este posesorul mașinii sau are permisiuni de administrator/tehnician
+      if (req.user.role !== 'administrator' && req.user.role !== 'tehnician') {
+        if (car.clientId !== req.user.id) {
+          const error = new Error('Unauthorized to update a car for another client');
+          error.statusCode = 403;
+          throw error;
+        }
       }
       
       // Validare date

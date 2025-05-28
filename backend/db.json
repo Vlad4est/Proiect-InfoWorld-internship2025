@@ -68,6 +68,20 @@
       "active": false,
       "createdAt": "2025-05-11T10:40:37.905Z",
       "updatedAt": "2025-05-11T10:40:37.905Z"
+    },
+    {
+      "id": 4,
+      "username": "client.test11",
+      "password": "$2b$10$FD17Fv11ixFrp7wnyz1weepdjTC0S2E/iTfqd48zz7ns5jyKI8E9y",
+      "firstName": "Client",
+      "lastName": "Test",
+      "phoneNumbers": [
+        "0722333444"
+      ],
+      "email": "client.test@email.com",
+      "active": true,
+      "createdAt": "2025-05-11T11:29:17.201Z",
+      "updatedAt": "2025-05-11T11:29:17.201Z"
     }
   ],
   "cars": [
@@ -134,6 +148,38 @@
       "active": false,
       "createdAt": "2025-05-11T10:40:37.905Z",
       "updatedAt": "2025-05-11T10:40:37.905Z"
+    },
+    {
+      "id": 5,
+      "clientId": 1,
+      "licensePlate": "B 789 XYZ",
+      "chassisNumber": "WVWZZZ1JZXY987654",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "engineType": "hibrid",
+      "engineCapacity": 1800,
+      "horsePower": 122,
+      "powerKW": 90,
+      "active": true,
+      "createdAt": "2025-05-11T11:32:09.785Z",
+      "updatedAt": "2025-05-11T11:32:09.785Z"
+    },
+    {
+      "id": 6,
+      "clientId": 3,
+      "licensePlate": "B789XYZ",
+      "chassisNumber": "WVWZZZ1JZXY9876541",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "engineType": "hibrid",
+      "engineCapacity": 1800,
+      "horsePower": 122,
+      "powerKW": 90,
+      "active": true,
+      "createdAt": "2025-05-11T11:32:45.075Z",
+      "updatedAt": "2025-05-11T11:32:45.075Z"
     }
   ],
   "appointments": [
